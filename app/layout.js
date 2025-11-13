@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 async function getAppSettings() {
-  const res = await fetch(`api/settings`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/settings`);
   const data = await res.json();
   return data.data;
 }
