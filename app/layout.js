@@ -13,7 +13,7 @@ let settings = {};
 
 async function getAppSettings() {
 try {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = 'https://manage.tajwaycabs.com';
   const res = await fetch(`${baseUrl}/api/settings`, { cache: 'no-store' });
   const data = await res.json();
   return data.data;
