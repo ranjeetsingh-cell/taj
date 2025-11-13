@@ -38,8 +38,7 @@ export async function generateMetadata() {
   },
   openGraph: {
     title: page.meta_title || page.title,
-    description: page.meta_description || page.short_description,
-    images: [page.meta_image || "/default.jpg"],
+    description: page.meta_description || page.short_description
   },
   };
 }

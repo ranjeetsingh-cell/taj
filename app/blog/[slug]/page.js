@@ -37,8 +37,7 @@ export async function generateMetadata({ params }) {
     description: blog.meta_description || blog.short_description,
     openGraph: {
       title: blog.meta_title || blog.title,
-      description: blog.meta_description || blog.short_description,
-      images: [blog.meta_image || "/default.jpg"],
+      description: blog.meta_description || blog.short_description
     },
   };
 }
