@@ -1,0 +1,149 @@
+.header{border-bottom:1px solid #ccc;}
+.blog-home-page{background: #eee;}
+.blog-item-inner{background:#fff;box-shadow:0px 0px 20px rgba(0,0,0,.2);}
+.blog-item-cnt-wrap{padding:20px;text-decoration:none;color:#000;}
+.blog-item-date{font-size:12px;color:#999;}
+.blog-item-heading {text-decoration: none; }
+.blog-item-heading,h2 {font-size:16px;line-height:24px;font-weight:500;margin:10px 0px;letter-spacing:.5px;color:#000;}
+h1.blog-item-heading {font-size:21px;line-height:35px;font-weight:600;margin:10px 0px;letter-spacing:.5px;color:#000;}
+.blog-item{margin-bottom:20px;}
+.blog-img img{width:100%;}
+.sidebar-heading{font-size:20px;font-weight:bold;border-bottom:1px solid #ffcc00;padding-bottom:10px;margin-bottom:15px;}
+/*
+.author-img{width:100px;height:100px;overflow:hidden;border-radius:100%;}
+.author-img img{width:100%;height:100%;object-fit:cover;}
+
+.sidebar-block{margin-bottom:40px;}
+
+.sidebar-search-grp{position:relative;border-radius:5px;overflow:hidden;}
+.sidebar-search-grp input{padding:10px 110px 10px 10px;width:100%;border:1px solid #ccc;}
+.sidebar-search-grp .submit-btn{position:absolute;top:0px;right:0px;border-radius:0px;max-width:100px;bottom:0px;padding:0px;}
+
+.sidebar-listing{list-style:none;padding:0px;}
+.sidebar-listing a{display:block;padding:5px 0px;color:#000;}
+
+.reply-comment textarea, .reply-comment input{width:100%;border:1px solid #ccc;border-radius:5px;padding:10px;}
+.reply-comment .form-group{margin-bottom:10px;}
+.reply-comment .form-group label{margin-bottom:10px;margin-top:0px;}
+
+.save-input{border:1px solid #ccc;-webkit-appearance:none;width:15px;height:15px;display:inline-block;vertical-align:middle;background:#fff;box-shadow:0px 0px 0px 1px #000; max-width: 15px;border-radius: 0px !important;margin-top:5px;padding:0px!important;}
+.save-input:checked{border:4px solid #fff;background-color:#000;}
+.save-detail{display:flex;gap:10px;margin-top:10px;}
+.save-detail label{font-weight:normal;line-height:normal;}
+
+@media(max-width:767px){
+	.author-info{text-align:center;}
+}*/
+
+.blog-image {
+  width: 100%;              
+  height: 300px;      
+  border: 1px solid #fff;  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  object-fit: cover;        
+}
+.blog_content {
+  color: #212529;
+  line-height: 1.70;
+  font-size: 1rem;
+}
+.blog_content h2 { font-size: 18px; font-weight: 500;}
+.blog_content h3 { font-size: 16px; font-weight: 500;}
+.blog_content p { font-size: 14px; font-weight: 400;}
+
+
+.blog_content h2,
+.blog_content h3,
+.blog_content h4 {
+  font-weight: 600;
+  line-height: 1.3;
+  color: #212529;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.blog_content h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #ffcc00;
+  margin-top: 0.5rem;
+  border-radius: 2px;
+}
+.blog_content h2 {
+  color: #212529;
+  font-size: 1.4rem;
+  border-left: 4px solid #ffcc00;
+  padding-left: 10px;
+}
+
+.blog_content h3 {
+  color: #212529;
+  font-size: 1.2rem;
+  border-left: 4px solid #ffcc00;
+  padding-left: 10px;
+}
+
+.blog_content h4 {
+  font-size: 1rem;
+  color: #495057;
+  margin-top: 1.5rem;
+}
+
+.blog_content p {
+  margin-bottom: 1rem;
+  color: #495057;
+}
+
+.blog_content ul {
+  margin: 1rem 0 1rem 1.5rem;
+  padding: 0;
+}
+
+.blog_content ul li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+.blog_content ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #198754;
+  font-weight: bold;
+}
+
+.blog_content a {
+  color: #ffcc00;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.blog_content a:hover {
+  color: #0a58ca;
+}
+
+.blog_content blockquote {
+  border-left: 4px solid #ffcc00;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #6c757d;
+  background: #f8f9fa;
+  border-radius: 0.25rem;
+  margin: 1.5rem 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.round-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 10%;
+    border: 1px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+}

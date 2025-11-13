@@ -1,66 +1,149 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { apiRequest } from "@/lib/laravel";
+import Search from "../components/Search";
 
-export default function Home() {
+
+async function getPage() {
+  try {
+      const url = `gethome`;
+     const data = await apiRequest(url);
+
+    if (!data.status) return null;
+    return data.meta;
+  } catch (error) {
+    console.error("Page fetch error:", error);
+    return null;
+  }
+}
+
+
+export async function generateMetadata() {
+
+  const page = await getPage(1);
+
+  if (!page) {
+	return {
+	  title: "Page Not Found",
+	  description: "Page Not Found",
+	};
+  }
+
+  return {
+	title: page.meta_title || page.title,
+	description: page.meta_description || page.short_description,
+	keywords: page.meta_keywords,
+	alternates: {
+    canonical: page.canonical,
+  },
+	openGraph: {
+	  title: page.meta_title || page.title,
+	  description: page.meta_description || page.short_description,
+	  images: [page.meta_image || "/default.jpg"],
+	},
+  };
+}
+
+
+
+
+export default async function Home() {
+
+const pageData = await getPage();
+const servicesData = pageData.our_services;
+const services = servicesData.services || [];
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div>
+			<div className="banner-wrap"><div className="bnr-bg-form-wrap">
+			<h1>{pageData.page_title}</h1>
+			<Search />
+			</div></div>
+		
+		<div className="why-us-wrap top-btm-space">
+			
+			<div className="container">
+				<div className="cmn-heading">Why book on Tajwaycabs?</div>
+				<div className="why-us-items-wrap">
+					<div className="why-icon-item">
+						<span className="w-icon"><img src="images/price-transparecy.svg" /></span>
+						<span className="w-txt">Price <span className="d-block">Transparency</span></span>
+					</div>
+					<div className="why-icon-item">
+						<span className="w-icon"><img src="images/24-7.svg" /></span>
+						<span className="w-txt">24x7  <span className="d-block">Service</span></span>
+					</div>
+					<div className="why-icon-item">
+						<span className="w-icon"><img src="images/zero-cancel.svg" /></span>
+						<span className="w-txt">Zero <span className="d-block">Cancellation</span></span>
+					</div>
+					<div className="why-icon-item">
+						<span className="w-icon"><img src="images/clean-hygienic.svg" /></span>
+						<span className="w-txt">Clean and<span className="d-block">Hygienic Car </span></span>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+
+		    {services.length > 0 && (
+		
+		<div className="service-full-wrap top-btm-space">
+			
+			<div className="container">
+				<div className="cmn-heading">{servicesData.title}</div>
+				<div className=" service-items-wrap">
+
+				{services.map((service, index) => (
+					<div key={index} className="service-item">
+						<div className="service-img"><img src={service.image} alt={service.title} /></div>
+						<div className="service-cont">
+							<h3 className="service-heading">{service.title}</h3>
+							<p className="service-info">{service.content}</p>
+						</div>
+					</div>
+				)) }
+
+				
+					
+				</div>
+			</div>
+			
+		</div>
+     )}  
+
+			
+		<div className="about-wrap top-btm-space">
+			<div className="container">
+				<div className="about-inner-wrap">
+					
+					<div className="about-cont-item">
+						<h2 className="cmn-heading text-start">{pageData.about_title}</h2>
+						
+							<div className="blog_content"
+							dangerouslySetInnerHTML={{ __html: pageData.short_content }}
+							/>
+					</div>
+					
+					<div className="about-img">
+						<img src="images/about-bnr.jpg" />
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<div className="vision-mission-wrap">
+			<div className="container">
+				<div className="vision-mission-inner">
+					<h2 className="cmn-heading text-start">{pageData.vision_mission}</h2>
+					<div className="vm-cont">
+						<div className="blog_content"
+							dangerouslySetInnerHTML={{ __html: pageData.content }}
+							/>
+					</div>
+				</div>
+			</div>
+		</div>
     </div>
   );
 }

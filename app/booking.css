@@ -1,0 +1,145 @@
+.modify-booking-row{
+	background:rgba(251, 193, 50,.2);
+	padding:10px 0px;
+}
+.modify-booking-popup{
+	position: fixed;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    top: 0px;
+    display: flex;
+    align-items: center;
+	display:none;
+}
+.p-arrow{
+	padding:0px 5px;
+}
+.pagination{
+	font-size:13px;
+}
+.searchCloseBtn { z-index: 9999;top:28px; right:12%; }
+.pagination a{text-decoration:none;color:#000;}
+.pagination a:hover{text-decoration:underline;}
+.booking-city{font-size:14px;}
+.booking-info-row{display:flex;gap:20px;align-items:center;justify-content: space-between;}
+.booking-small-heading{display:block;font-size:12px;}
+.booking-info-row div {font-weight:500;align-items:center;}
+.modify-booking-popup.open{display:block;}
+.select-car-book-cancel-support .support-verified{background:rgba(251, 193, 50,.8);border-radius:15px;margin:15px 0px;padding:15px;}
+.sup-ver-col p{margin:0px;}
+.select-car-book-cancel-support .sup-ver-col{gap:10px;}
+
+.book-car-item-box{border:1px solid #ffcc00;border-radius:15px;margin-bottom:10px;}
+.book-car-item{display:flex;gap:20px;justify-content: space-between;padding:20px;}
+.car-seat{margin:0px;}
+.book-car-rating{font-size:16px;font-weight:bold;}
+.car-rating{background:#000;border-radius:10px;color:#fff;padding:5px;font-size:10px;display:inline-block;}
+.car-rating img{max-width:10px;}
+.book-car-listing{list-style:none;margin:0px;padding:0px;}
+.book-car-listing li{padding:5px 0px;}
+.book-car-listing li img{margin-right:10px;}
+.in-ex{text-decoration:none;color:rgba(251, 193, 50,.9);margin-top:5px;display:block;}
+.price-wrap > div{margin-bottom:10px;}
+.discount-price{font-size:18px;font-weight:600;}
+.tax-charges{font-size:12px;color:#999;}
+.old-price{text-decoration: line-through;margin-left:10px;}
+.price-discount{margin-left:5px;}
+
+.in-and-ex-wrap{border-top:1px solid #ccc;padding:20px;margin-top:20px;display:none;width:calc(100% - 40px);margin-left:auto;margin-right:auto;}
+.in-and-ex-wrap h3{font-size:16px;font-weight:bold;}
+.in-ex-list{list-style:none;padding:0px;}
+.in-ex-list li{position:relative;padding-bottom:5px;    padding-left: 20px;}
+.in-ex-list li:before{content:"";display:block;width:10px;height:6px;border-left:2px solid #ffcc00;border-bottom:2px solid #ffcc00;transform:rotate(-45deg);display:inline-block;vertical-align:middle;margin-right:10px;position: absolute;left:0px;top:6px;}
+
+.in-and-ex-wrap.active{display:block;}
+.luggage-block{padding:10px;background:#ffcc00;border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;}
+.luggage-block span{margin-left:15px;}
+.booking-left-info{width:calc(100% - 180px);justify-content:space-between;}
+.car-tablinks{text-decoration:none;}
+.car-tablinks span{display:block;width:100%;text-align:center;font-size:10px;color:#ccc;}
+.car-tabs{display:flex;gap:15px;justify-content:center;margin:10px 0px;}
+.car-tablinks .tab-car-img{border:1px solid #ccc;border-radius:100%;width:60px;height:60px;display:flex;align-items:center;justify-content: center;}
+.car-tablinks.active .tab-car-img{border:1px solid #ffcc00;}
+.car-tablinks.active span{color:#ffcc00;}
+ .tab-car-img img{width:45px;}
+ .book-car-listing li.luggage-block{border-radius:10px;display:inline-block;padding:5px 20px;;}
+.type-n-seat{margin-right:10px;}
+
+.extra-info-tabs{display:flex;margin-bottom:15px;}
+.extra-info-tabs button{-webkit-appearance:none;padding:5px 10px;}
+.tablinks1.active{background:rgba(251, 193, 50,.8);}
+.extra-info-img-listing {list-style:none;padding:0px;}
+.extra-info-img-listing .cmn-icon{list-style:none;padding:0px;width:30px;height:30px;border-radius:100%;border:1px solid #ffcc00;display:inline-block;vertical-align:middle;margin-right:10px;display:flex;align-items:cente;justify-content:center;}
+.extra-info-img-listing .cmn-icon img{max-width:18px;    object-fit: contain;}
+.extra-info-img-listing li{margin:10px 0px;display:flex;}
+
+/*search car css below */
+.car-search-mid-area{padding:20px 0px;}
+.tabcontent1{display:none;}
+.contact-pickup-form-wrap{display:flex;flex-wrap:wrap;justify-content:space-between;}
+.form-left-area{width:58%;}
+.form-right-area{width:40%;}
+.box-shadow-wrap{background:#fff;box-shadow:0px 0px 30px rgba(0,0,0,.05);border-radius:15px;overflow:hidden;}
+.booking-detail-heading{background:rgba(251, 193, 50,.8);font-size:18px;padding:10px;text-align:center;margin:0px;}
+.booking-detail-rows{padding:15px;}
+.booking-cmn-row{display:flex;padding:5px 0px;}
+.booking-col.bold-col{width:120px;font-weight:500;}
+.booking-detail-wrap{margin-bottom:10px;}
+
+.car-search-mid-area .tabcontent1{padding:0px 15px;}
+.car-search-mid-area .extra-info-tabs button{width:100%;}
+
+.contact-pickup-form-inner{padding:15px;}
+.contact-pickup-heading{font-size:22px;font-weight:500;text-align:center;margin-bottom:30px;}
+.contact-pickup-form-inner .form-group{display:flex;margin-bottom:20px;}
+.contact-pickup-form-inner .form-group label{width:80px;min-width:80px;}
+.contact-pickup-form-inner .form-group .form-field{width:calc(100% - 80px);}
+.air-pick{display:block;margin-top:10px;color:rgba(251, 193, 50,.8);}
+.form-field.mobile-field-wrap{display:flex;gap:10px;}
+.contact-pickup-form-inner .form-control{border-radius:0px;width:100%;}
+
+.alternate-input{display:none;}
+.contact-pickup-form-inner .alternate-show-hide{padding:2px 10px;right:10px;top:0px;font-size:12px;cursor:pointer;}
+
+.input-show{display:block;}
+.alternate-show-hide span{margin-right:5px;}
+.alternate-show-hide span{margin-right:5px;}
+.alternate-show-hide span.icon:before{content:"+";}
+.alternate-show-hide.active span.icon:before{content:"-";}
+
+
+@media(max-width:767px){
+	.booking-left-info{width: calc(100% - 160px);        justify-content: flex-start;gap:0px 10px;}
+	.booking-left-info{flex-wrap:wrap;}
+	.booking-trip-type{display:none;}
+	
+	/*.tabcontent-item{display:none;}
+	.tabcontent-item.active{display:block;}*/
+	
+	.old-price{display:block;width:100%;margin:0px;}
+	.type-n-seat{vertical-align:middle;font-size:14px;margin-top: 5px;display: inline-block;}
+	
+	.book-car-listing{margin-top:15px;}
+	.select-car-btn{width:100%;margin-top:15px;}
+	.select-car-btn button{width:100%;display:block;text-align:center;}
+	
+	.book-car-item-mobile{border: 1px solid #ffcc00;border-radius: 15px;padding:20px;}
+	.book-car-info-mobile{display:flex;gap:10px;justify-content:space-between;}
+	.sup-ver-col{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;text-align:center;}
+	
+	.select-car-book-cancel-support .support-verified .sup-ver-inner{padding:0px;}
+	
+	/*search car css below */
+	.form-left-area , .form-right-area{width:100%;}
+	.form-right-area{margin-top:10px;}
+	.contact-pickup-form-inner .form-group{flex-wrap:nowrap;}
+	.contact-pickup-form-inner .form-group label{font-size:12px;width: 50px;min-width: 50px; flex: 0;}
+	.contact-pickup-form-inner .form-group .form-field{width:calc(100% - 50px);}
+	.contact-pickup-form-inner .form-control{max-width:100%;}
+	.contact-pickup-form-inner .alternate-show-hide{font-size:10px;top:10px;right:5px;padding:2px 5px;}
+	.form-field.mobile-field-wrap .form-control{max-width:calc(100% - 100px);}
+	.form-field.mobile-field-wrap select.form-control{max-width:90px;}
+	.searchCloseBtn { right:6%; }
+}
