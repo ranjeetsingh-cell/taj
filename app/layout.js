@@ -3,7 +3,7 @@ import "./bootstrap.min.css";
 import "./globals.css";
 import Script from "next/script";
 import HeaderClient from "@/components/HeaderClient";
-
+import { apiRequest } from "@/lib/laravel";
 
 export const metadata = {
   title: "Tajways",
@@ -13,9 +13,9 @@ let settings = {};
 
 async function getAppSettings() {
 try {
-  const baseUrl = 'https://manage.tajwaycabs.com';
-  const res = await fetch(`${baseUrl}/api/settings`, { cache: 'no-store' });
-  const data = await res.json();
+ // const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000222';
+const url = `settings`;
+const data = await apiRequest(url);
   return data.data;
 } catch (err) {
   console.error('Error fetching settings:', err);
