@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import "../css/booking.css";
-import Cabs from './Cabs';
+import CabResult from './CabResult';
 
 export async function generateMetadata({searchParams }) {
  
@@ -16,7 +16,7 @@ const to = resolvedSearchParams?.to;
 export default function Page() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <Cabs />
+      <CabResult />
       
     </Suspense>
   );
