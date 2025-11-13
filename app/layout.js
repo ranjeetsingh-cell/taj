@@ -9,17 +9,23 @@ export const metadata = {
   title: "Tajways",
   description: "Tajways",
 };
+let settings = {};
 
 async function getAppSettings() {
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  const res = await fetch(`${baseUrl}/api/settings`);
+try {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const res = await fetch(`${baseUrl}/api/settings`, { cache: 'no-store' });
   const data = await res.json();
   return data.data;
+} catch (err) {
+  console.error('Error fetching settings:', err);
+}
+
 }
 
 export default async function RootLayout({ children }) {
 
-const settings = await getAppSettings();
+settings = await getAppSettings();
 
 
 
