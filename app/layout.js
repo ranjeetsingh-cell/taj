@@ -11,7 +11,8 @@ export const metadata = {
 };
 
 async function getAppSettings() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/settings`);
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const res = await fetch(`${baseUrl}/api/settings`);
   const data = await res.json();
   return data.data;
 }
