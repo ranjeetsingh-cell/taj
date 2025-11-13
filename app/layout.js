@@ -88,12 +88,12 @@ settings = await getAppSettings();
 							<li><a href="tel:+919354860010">+91 9354 860 010</a></li>
 						</ul>
 						<div className="social-icon">
-							<a href="#" className="fb-icon"><img src="/images/fb.svg" /></a>
-							<a href="#" className="fb-icon"><img src="/images/insta.svg" /></a>
-							<a href="#" className="fb-icon"><img src="/images/pint.svg" /></a>
-							<a href="#" className="fb-icon"><img src="/images/link.svg" /></a>
-							<a href="#" className="fb-icon"><img src="/images/x.svg" /></a>
-							<a href="#" className="fb-icon"><img src="/images/utube.svg" /></a>
+							<a href={settings.facebook} target="_blank" className="fb-icon"><img src="/images/fb.svg" /></a>
+							<a href={settings.instagram} target="_blank" className="fb-icon"><img src="/images/insta.svg" /></a>
+							<a href={settings.pinterest} target="_blank" className="fb-icon"><img src="/images/pint.svg" /></a>
+							<a href={settings.linkedin} target="_blank" className="fb-icon"><img src="/images/link.svg" /></a>
+							<a href={settings.twitter} target="_blank" className="fb-icon"><img src="/images/x.svg" /></a>
+							<a href={settings.youtube} target="_blank" className="fb-icon"><img src="/images/utube.svg" /></a>
 						</div>
 					</div>
 					
