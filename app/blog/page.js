@@ -2,7 +2,7 @@
 import { Suspense } from 'react';
 import "../css/blog.css";
 import Blogs from './blogs';
-import { apiRequest } from "/lib/laravel";
+import { apiRequest } from "@/lib/laravel";
 
 
 async function getPage(id) {
