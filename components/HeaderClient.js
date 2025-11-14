@@ -45,22 +45,22 @@ const telHref2 = `tel:${phoneNumber2}`;
 					}`} id="mobile-menu" >
 					<ul className="main-menu">
 						<li><a href="/">Home</a></li>
-						<li><a href="#">About us</a></li>
-						<li><a href="#">Self-drive car service</a></li>
+						<li><a href="/about">About us</a></li>
+						<li><a href="/">Self-drive car service</a></li>
 						<li><a href="/blog">Blog</a></li>
 						<li><a href="/contact-us">Contact us</a></li>
-						<li><a href="#">Terms & Conditions</a></li>
-						<li><a href="#">Booking & Privacy Policy</a></li>
+						<li><a href="/terms-and-conditions">Terms & Conditions</a></li>
+						<li><a href="/privacy-policy">Booking & Privacy Policy</a></li>
 					</ul>
 					<div className="sidemenu-social-icon">
 						<h3 className="sidemenu-heading">Get in Touch</h3>
 						<div className="social-icon ">
-							<a href="#" className="fb-icon"><img src="/images/fb.svg" /></a>
-							<a href="#" className="fb-icon"><img src="/images/insta.svg" /></a>
-							<a href="#" className="fb-icon"><img src="/images/pint.svg" /></a>
-							<a href="#" className="fb-icon"><img src="/images/link.svg" /></a>
-							<a href="#" className="fb-icon"><img src="/images/x.svg" /></a>
-							<a href="#" className="fb-icon"><img src="/images/utube.svg" /></a>
+							<a href={settings.facebook} target="_blank" className="fb-icon"><img src="/images/fb.svg" /></a>
+							<a href={settings.instagram} target="_blank" className="fb-icon"><img src="/images/insta.svg" /></a>
+							<a href={settings.pinterest} target="_blank" className="fb-icon"><img src="/images/pint.svg" /></a>
+							<a href={settings.linkedin} target="_blank" className="fb-icon"><img src="/images/link.svg" /></a>
+							<a href={settings.twitter} target="_blank" className="fb-icon"><img src="/images/x.svg" /></a>
+							<a href={settings.youtube} target="_blank" className="fb-icon"><img src="/images/utube.svg" /></a>
 						</div>
 					</div>
 					<div className="close-menu" id="menuClose">
