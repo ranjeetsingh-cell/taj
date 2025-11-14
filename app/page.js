@@ -63,26 +63,26 @@ const services = servicesData.services || [];
 			<div className="app-google-rating-inner">
 			
 				<div className="rating-col">
-					<span className="rating-icon"><img src="images/tripadvisor-icon.png" width="50" height="50" /></span>
+					<span className="rating-icon"><img src="images/tripadvisor-icon.png" width="50" height="50" fetchPriority="high" alt="tajways Cabs"/></span>
 					<div className="rating-info">
 						<h3 className="rating-heading"> App Store</h3>
-						<div className="star-rating-img"><img src="images/website-ratings.png" width="85" /></div>
+						<div className="star-rating-img"><img src="images/website-ratings.png" width="85" fetchPriority="high" alt="tajways Cabs"/></div>
 						<div className="rating-review">(4.2K+ Reviews)</div>
 					</div>
 				</div>
 				<div className="rating-col">
-					<span className="rating-icon"><img src="images/google-icon.png" width="50" height="50" /></span>
+					<span className="rating-icon"><img src="images/google-icon.png" width="50" height="50" fetchPriority="high" alt="tajways Cabs"/></span>
 					<div className="rating-info">
 						<h3 className="rating-heading"> Google</h3>
-						<div className="star-rating-img"><img src="images/website-ratings.png" width="85" /></div>
+						<div className="star-rating-img"><img src="images/website-ratings.png" width="85" fetchPriority="high" alt="tajways Cabs"/></div>
 						<div className="rating-review">(6.2K+ Reviews)</div>
 					</div>
 				</div>
 				<div className="rating-col">
-					<span className="rating-icon"><img src="images/playstore-icon.png" width="50" height="50" /></span>
+					<span className="rating-icon"><img src="images/playstore-icon.png" width="50" height="50" fetchPriority="high" alt="tajways Cabs"/></span>
 					<div className="rating-info">
 						<h3 className="rating-heading"> Play Store</h3>
-						<div className="star-rating-img"><img src="images/website-ratings.png" width="85" /></div>
+						<div className="star-rating-img"><img src="images/website-ratings.png" width="85" fetchPriority="high" alt="tajways Cabs" /></div>
 						<div className="rating-review">(15.5K+ Reviews)</div>
 					</div>
 				</div>
@@ -97,19 +97,19 @@ const services = servicesData.services || [];
 				<div className="cmn-heading">Why book on Tajwaycabs?</div>
 				<div className="why-us-items-wrap">
 					<div className="why-icon-item">
-						<span className="w-icon"><img src="images/price-transparecy.svg" /></span>
+						<span className="w-icon"><img src="images/price-transparecy.svg" width={60} height={60} fetchPriority="high" alt="tajways Cabs" /></span>
 						<span className="w-txt">Price <span className="d-block">Transparency</span></span>
 					</div>
 					<div className="why-icon-item">
-						<span className="w-icon"><img src="images/24-7.svg" /></span>
+						<span className="w-icon"><img src="images/24-7.svg"  width={60} height={60} fetchPriority="high" alt="tajways Cabs"/></span>
 						<span className="w-txt">24x7  <span className="d-block">Service</span></span>
 					</div>
 					<div className="why-icon-item">
-						<span className="w-icon"><img src="images/zero-cancel.svg" /></span>
+						<span className="w-icon"><img src="images/zero-cancel.svg"  width={60} height={60} fetchPriority="high" alt="tajways Cabs"/></span>
 						<span className="w-txt">Zero <span className="d-block">Cancellation</span></span>
 					</div>
 					<div className="why-icon-item">
-						<span className="w-icon"><img src="images/clean-hygienic.svg" /></span>
+						<span className="w-icon"><img src="images/clean-hygienic.svg"  width={60} height={60} fetchPriority="high" alt="tajways Cabs"/></span>
 						<span className="w-txt">Clean and<span className="d-block">Hygienic Car </span></span>
 					</div>
 				</div>
@@ -128,7 +128,7 @@ const services = servicesData.services || [];
 
 				{services.map((service, index) => (
 					<div key={index} className="service-item">
-						<div className="service-img"><img src={service.image} alt={service.title} /></div>
+						<div className="service-img"><img src={service.image} alt={service.title}  fetchPriority="high" /></div>
 						<div className="service-cont">
 							<h3 className="service-heading">{service.title}</h3>
 							<p className="service-info">{service.content}</p>
