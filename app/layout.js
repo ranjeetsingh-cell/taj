@@ -5,11 +5,6 @@ import Script from "next/script";
 import HeaderClient from "@/components/HeaderClient";
 import { apiRequest } from "@/lib/laravel";
 
-export const metadata = {
-  title: "Tajways",
-  description: "Tajways",
-};
-
 
 async function getAppSettings() {
 try {
