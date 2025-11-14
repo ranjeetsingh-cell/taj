@@ -9,14 +9,14 @@ export const metadata = {
   title: "Tajways",
   description: "Tajways",
 };
-let settings = {};
+
 
 async function getAppSettings() {
 try {
  // const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000222';
 const url = `settings`;
 const data = await apiRequest(url);
-  return data.data;
+return data.data;
 } catch (err) {
   console.error('Error fetching settings:', err);
 }
@@ -25,7 +25,7 @@ const data = await apiRequest(url);
 
 export default async function RootLayout({ children }) {
 
-settings = await getAppSettings();
+const settings = await getAppSettings();
 
 
 

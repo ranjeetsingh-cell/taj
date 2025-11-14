@@ -1,4 +1,4 @@
-//import { notFound } from "next/navigation";
+
 import { apiRequest } from "@/lib/laravel";
 
 import "../../css/booking.css";
@@ -37,8 +37,7 @@ const page = pageData.page;
     description: page.meta_description || page.short_description,
     openGraph: {
       title: page.meta_title || page.title,
-      description: page.meta_description || page.short_description,
-      images: [page.meta_image || "/default.jpg"],
+      description: page.meta_description || page.short_description
     },
   };
 }
