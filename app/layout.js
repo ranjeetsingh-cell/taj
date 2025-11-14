@@ -3,9 +3,9 @@ import "./bootstrap.min.css";
 import "./globals.css";
 import Script from "next/script";
 import HeaderClient from "/components/HeaderClient";
-import { apiRequest } from "/lib/laravel";
+//import { apiRequest } from "/lib/laravel";
 
-
+/*
 async function getAppSettings() {
 try {
 
@@ -18,12 +18,25 @@ return data.data;
   console.error('Error fetching global set Data -RS :', err);
 }
 
-}
+}*/
 
 export default async function RootLayout({ children }) {
 
-const settings = await getAppSettings();
+/*const settings = await getAppSettings();*/
 
+const settings = {
+    "phone": "9999955712",
+    "whatsapp": "9354860010",
+    "customer_count": "3000",
+    "facebook": "https://www.facebook.com/tajwaycabs",
+    "instagram": "https://www.instagram.com/tajwaycabs",
+    "twitter": "https://x.com/tajwaycabs",
+    "linkedin": "https://www.linkedin.com/company/tajwaycabs",
+    "phone2": "8800550676",
+    "vehicles": "1000",
+    "youtube": "https://www.youtube.com/channel/UCgoObBHSddqA0esdeqgE_LA",
+    "email": "info@tajwaycabs.com"
+};
 
 
   return (
