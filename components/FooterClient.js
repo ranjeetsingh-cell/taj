@@ -104,12 +104,12 @@ const telHref2 = `tel:${phoneNumber2}`;
 							<li><a href="tel:+919354860010">+91 9354 860 010</a></li>
 						</ul>
 						<div className="social-icon">
-							<a href={settings.facebook} target="_blank" className="fb-icon"><img src="/images/fb.svg" /></a>
-							<a href={settings.instagram} target="_blank" className="fb-icon"><img src="/images/insta.svg" /></a>
-							<a href={settings.pinterest} target="_blank" className="fb-icon"><img src="/images/pint.svg" /></a>
-							<a href={settings.linkedin} target="_blank" className="fb-icon"><img src="/images/link.svg" /></a>
-							<a href={settings.twitter} target="_blank" className="fb-icon"><img src="/images/x.svg" /></a>
-							<a href={settings.youtube} target="_blank" className="fb-icon"><img src="/images/utube.svg" /></a>
+							<a href={settings.facebook} target="_blank" className="fb-icon"><img src="/images/fb.svg" width={32} height={32} loading="lazy" alt="tajways cabs"  /></a>
+							<a href={settings.instagram} target="_blank" className="fb-icon"><img src="/images/insta.svg"  width={32} height={32} loading="lazy" alt="tajways cabs" /></a>
+							<a href={settings.pinterest} target="_blank" className="fb-icon"><img src="/images/pint.svg"  width={32} height={32} loading="lazy" alt="tajways cabs" /></a>
+							<a href={settings.linkedin} target="_blank" className="fb-icon"><img src="/images/link.svg"  width={32} height={32} loading="lazy" alt="tajways cabs" /></a>
+							<a href={settings.twitter} target="_blank" className="fb-icon"><img src="/images/x.svg"  width={32} height={32} loading="lazy" alt="tajways cabs" /></a>
+							<a href={settings.youtube} target="_blank" className="fb-icon"><img src="/images/utube.svg"  width={32} height={32} loading="lazy" alt="tajways cabs" /></a>
 						</div>
 					</div>
 					
@@ -127,8 +127,8 @@ const telHref2 = `tel:${phoneNumber2}`;
 				<div className="header-inner">
 					
 					<div className="mobile-footer-btm dil-hide header-links-item footer-btm-fixed">
-						<a href={telHref1} className="whtsapp-link"><img src="/images/m-whts-icon.svg" width="40" /><span>Whtsapp</span></a>
-						<button onClick={handleOpen} className="call-link phone-popup-link"><img src="/images/m-call-icon.svg" width="40" /><span>Call Now</span></button>
+						<a href={telHref1} className="whtsapp-link"><img src="/images/m-whts-icon.svg" width={40} height={40}  loading="lazy" alt="whatsapp" /><span>Whtsapp</span></a>
+						<button onClick={handleOpen} className="call-link phone-popup-link"><img src="/images/m-call-icon.svg" width={40} height={40}  loading="lazy" alt="callnow"  /><span>Call Now</span></button>
 						
 						<div className={`phone-popup-wrap ${isOpen ? "d-block " : "d-md-none"}`} >
 								<a href="tel:+918383927223" className="call-no">+91 8383 927 223</a>
@@ -140,7 +140,7 @@ const telHref2 = `tel:${phoneNumber2}`;
 								<a href="tel:+918800550901" className="call-no">+91 880 055 0901</a>
 						</div>
 						
-						<button onClick={handleOpenOffer} className="offer-m-btm"><img src="/images/special-offer.svg" width="40" /><span>Offer</span></button>
+						<button onClick={handleOpenOffer} className="offer-m-btm"><img src="/images/special-offer.svg" width={40} height={40}  loading="lazy" alt="offers"  /><span>Offer</span></button>
 						<div className={`special-offer-wrap ${isOffer ? " offer-show " : " "}`} >
 							<div className="special-offer-inner">
 								<div className="sp-of-cont">
