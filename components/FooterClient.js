@@ -124,8 +124,8 @@ const telHref2 = `tel:${phoneNumber2}`;
 				<div className="header-inner">
 					
 					<div className="mobile-footer-btm dil-hide header-links-item footer-btm-fixed">
-						<a href={telHref1} className="whtsapp-link"><img src="images/m-whts-icon.svg" width="40" /><span>Whtsapp</span></a>
-						<button onClick={handleOpen} className="call-link phone-popup-link"><img src="images/m-call-icon.svg" width="40" /><span>Call Now</span></button>
+						<a href={telHref1} className="whtsapp-link"><img src="/images/m-whts-icon.svg" width="40" /><span>Whtsapp</span></a>
+						<button onClick={handleOpen} className="call-link phone-popup-link"><img src="/images/m-call-icon.svg" width="40" /><span>Call Now</span></button>
 						
 						<div className={`phone-popup-wrap ${isOpen ? "d-block " : "d-md-none"}`} >
 								<a href="tel:+918383927223" className="call-no">+91 8383 927 223</a>
@@ -137,12 +137,12 @@ const telHref2 = `tel:${phoneNumber2}`;
 								<a href="tel:+918800550901" className="call-no">+91 880 055 0901</a>
 						</div>
 						
-						<button onClick={handleOpenOffer} className="offer-m-btm"><img src="images/special-offer.svg" width="40" /><span>Offer</span></button>
+						<button onClick={handleOpenOffer} className="offer-m-btm"><img src="/images/special-offer.svg" width="40" /><span>Offer</span></button>
 						<div className={`special-offer-wrap ${isOffer ? " offer-show " : " "}`} >
 							<div className="special-offer-inner">
 								<div className="sp-of-cont">
 									<button onClick={handleCloseOffer} className="close-offer">+</button>
-									<div className="offer-img"><img src="images/special-offer.svg" width="70" /></div>
+									<div className="offer-img"><img src="/images/special-offer.svg" width="70" /></div>
 									<p className="offer-txt">20% OFF on Selected Ride Get Code</p>
 									<div className="submit-form">
 										<form onSubmit={handleSubmit}>
