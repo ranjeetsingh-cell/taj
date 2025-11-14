@@ -145,7 +145,7 @@ const telHref2 = `tel:${phoneNumber2}`;
 							<div className="special-offer-inner">
 								<div className="sp-of-cont">
 									<button onClick={handleCloseOffer} className="close-offer">+</button>
-									<div className="offer-img"><img src="/images/special-offer.svg" width="70" /></div>
+									<div className="offer-img"><img src="/images/special-offer.svg" width={70} height={70}  loading="lazy"   alt="offers" /></div>
 									<p className="offer-txt">20% OFF on Selected Ride Get Code</p>
 									<div className="submit-form">
 										<form onSubmit={handleSubmit}>
