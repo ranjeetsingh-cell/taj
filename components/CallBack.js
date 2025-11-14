@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-  
+  const NEXT_PUBLIC_SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
 export default function CallBack({passData }) {
   const [formData, setFormData] = useState({
@@ -24,7 +24,7 @@ export default function CallBack({passData }) {
     setStatus({ type: "", message: "" });
 
     try {
-      const res = await fetch("/api/lead", {
+      const res = await fetch(`${NEXT_PUBLIC_SITE_URL}api/lead`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

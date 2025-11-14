@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+const NEXT_PUBLIC_SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
 const Search = ({leadFromData = {}}) => {
 
@@ -128,7 +129,7 @@ const handleMainTabClick = (index) => {
   useEffect(() => {
     async function fetchAirports() {
       try {
-        const res = await fetch('/api/airports'); // your API route
+        const res = await fetch(`${NEXT_PUBLIC_SITE_URL}api/airports`); // your API route
         const data = await res.json();
        // setAirports(data.airports || []);
 
@@ -168,7 +169,7 @@ const handleMainTabClick = (index) => {
   useEffect(() => {
     async function fetchCities() {
       try {
-        const res = await fetch('/api/cities');
+        const res = await fetch(`${NEXT_PUBLIC_SITE_URL}api/cities`);
         const data = await res.json();
         setAllCities(data.cities || []);
       } catch (err) {
@@ -187,13 +188,13 @@ const handleMainTabClick = (index) => {
     // Auto-suggest for city field
    if (name === 'from') {
     
-      const res = await fetch(`/api/location?input=${value}`);
+      const res = await fetch(`${NEXT_PUBLIC_SITE_URL}api/location?input=${value}`);
       const data = await res.json();
       setLocations(data.candidates || []);
       setFromSuggestions(allCities);
     } else if (name === 'to') {
      
-      const res = await fetch(`/api/location?input=${value}`);
+      const res = await fetch(`${NEXT_PUBLIC_SITE_URL}api/location?input=${value}`);
       const data = await res.json();
       setLocations(data.candidates || []);
       setToSuggestions(allCities);
@@ -235,8 +236,8 @@ const handleMainTabClick = (index) => {
       //setMessage('✅ Form submitted successfully!');
       //setTimeout(() => setMessage(''), 2000);
       const query = new URLSearchParams(formData).toString();
-      router.push(`/cabs?${query}`);
-     window.location.href = `/cabs?${query}`;
+      router.push(`${NEXT_PUBLIC_SITE_URL}cabs?${query}`);
+     window.location.href = `${NEXT_PUBLIC_SITE_URL}cabs?${query}`;
 
     } else {
       setMessage('');

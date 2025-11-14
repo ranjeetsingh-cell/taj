@@ -1,10 +1,7 @@
 "use client";
 import { useState } from "react";
   
-/*
-
-{"name":"Ranjeet Singh111","email":"ranjeet180@gmail.com","mobile":"7973826133","from_city_id":"390","from_city":"Chandigarh","to_city":"Chandigarh","pick_date":"2025-10-30","trip_type":"oneway","message":"test","return_date":null}           
-*/
+  const NEXT_PUBLIC_SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
 export default function LeadForm({ title = "Contact Us", passData }) {
   const [formData, setFormData] = useState({
@@ -33,7 +30,7 @@ export default function LeadForm({ title = "Contact Us", passData }) {
     setStatus({ type: "", message: "" });
 
     try {
-      const res = await fetch("/api/lead", {
+      const res = await fetch(`${NEXT_PUBLIC_SITE_URL}api/lead`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-
+  const NEXT_PUBLIC_SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 export default function ContactForm({ title = "Contact Us", formType = "contact_us" }) {
   const [formData, setFormData] = useState({
     name: "",
@@ -23,7 +23,7 @@ export default function ContactForm({ title = "Contact Us", formType = "contact_
     setStatus({ type: "", message: "" });
 
     try {
-      const res = await fetch("/api/contact-us", {
+      const res = await fetch(`${NEXT_PUBLIC_SITE_URL}api/contact-us`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
