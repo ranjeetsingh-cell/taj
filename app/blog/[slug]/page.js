@@ -56,24 +56,25 @@ export default async function BlogPage({ params }) {
 
   return (	<div className="blog-mid-page"><div className="blog-detail-page py-4">
     <div className="container py-5">
-       <div className="row"><div className="col-8 blog-list-wrap blog-detail-page">
-               <h1 className="blog-item-heading">{blog.title}</h1>
-								<span className="blog-item-date">{blog.created_at}</span>
+       <div className="row">
+        <div className="col-md-8">
+            <h1 className="blog-item-heading">{blog.title}</h1>
+            <span className="blog-item-date">{blog.created_at}</span>
 
-                <figure className="blog-img d-block"><img src={blog.image} alt={blog.title} />
-								</figure>
+            <figure className="blog-img d-block"><img src={blog.image} alt={blog.title} />
+            </figure>
 
-                    <div className="blog_content"
-                    dangerouslySetInnerHTML={{ __html: blog.description }}
-                    />
+            <div className="blog_content"
+            dangerouslySetInnerHTML={{ __html: blog.description }}
+            />
 
-        <Link href="/blog" className="btn btn-outline-secondary mb-3">
-        &larr; Back to Blogs
-      </Link>
+            <Link href="/blog" className="btn btn-outline-secondary mb-3">
+            &larr; Back to Blogs
+            </Link>
 
-
+        
        </div>
-    <div className="col-4">
+    <div className="col-md-4">
 
      <aside className="latest-blogs p-3 bg-white rounded-3 shadow-sm">
       <h5 className="fw-bold mb-3 border-bottom pb-2 text-primary">Latest Blogs</h5>

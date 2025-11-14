@@ -56,6 +56,40 @@ const services = servicesData.services || [];
 			<h1>{pageData.page_title}</h1>
 			<Search />
 			</div></div>
+
+
+
+		<div className="app-google-rating-wrap">
+			<div className="app-google-rating-inner">
+			
+				<div className="rating-col">
+					<span className="rating-icon"><img src="images/tripadvisor-icon.png" width="50" height="50" /></span>
+					<div className="rating-info">
+						<h3 className="rating-heading"> App Store</h3>
+						<div className="star-rating-img"><img src="images/website-ratings.png" width="85" /></div>
+						<div className="rating-review">(4.2K+ Reviews)</div>
+					</div>
+				</div>
+				<div className="rating-col">
+					<span className="rating-icon"><img src="images/google-icon.png" width="50" height="50" /></span>
+					<div className="rating-info">
+						<h3 className="rating-heading"> Google</h3>
+						<div className="star-rating-img"><img src="images/website-ratings.png" width="85" /></div>
+						<div className="rating-review">(6.2K+ Reviews)</div>
+					</div>
+				</div>
+				<div className="rating-col">
+					<span className="rating-icon"><img src="images/playstore-icon.png" width="50" height="50" /></span>
+					<div className="rating-info">
+						<h3 className="rating-heading"> Play Store</h3>
+						<div className="star-rating-img"><img src="images/website-ratings.png" width="85" /></div>
+						<div className="rating-review">(15.5K+ Reviews)</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
 		
 		<div className="why-us-wrap top-btm-space">
 			
