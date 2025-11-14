@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import BookingStatus from "@/components/BookingStatus";
+import BookingStatus from "/components/BookingStatus";
 
 export default function Page() {
   return (
