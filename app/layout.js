@@ -8,12 +8,14 @@ import { apiRequest } from "/lib/laravel";
 
 async function getAppSettings() {
 try {
- // const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000222';
+
 const url = `settings`;
 const data = await apiRequest(url);
+console.log(data);
 return data.data;
+
 } catch (err) {
-  console.error('Error fetching settings:', err);
+  console.error('Error fetching global set Data -RS :', err);
 }
 
 }
