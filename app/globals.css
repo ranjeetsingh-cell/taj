@@ -471,6 +471,12 @@ transition: all 0.3s ease;
 	
 	.custom-input-mobile-only.active + .custom-input-dropdown{display:block;}
 
+  input,
+textarea,
+select {
+  font-size: 16px !important;
+}
+
 }
 
 @media(max-width:399px){

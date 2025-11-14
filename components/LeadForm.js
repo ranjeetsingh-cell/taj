@@ -56,8 +56,8 @@ export default function LeadForm({ title = "Contact Us", passData }) {
     setLoading(false);
   };
 
-  return (<div className="car-search-mid-area py-5"><div className="container">	
-<div className="contact-pickup-form  box-shadow-wrap w-50 mx-auto p-3 text-center">	<div className="contact-pickup-form-inner">
+  return (<div className="car-search-mid-area py-5">
+<div className="contact-pickup-form  box-shadow-wrap mx-auto p-3 text-center">	<div className="contact-pickup-form-inner">
         <h2 className="contact-pickup-heading">{title}</h2>
 
         <p>We’re sorry, but there are no cars available for your selected itinerary right now.</p>
@@ -155,6 +155,6 @@ export default function LeadForm({ title = "Contact Us", passData }) {
 
        
       </div>
-    </div></div></div>
+    </div></div>
   );
 }
