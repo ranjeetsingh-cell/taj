@@ -44,7 +44,9 @@ export default function FooterClient({settings}) {
 
   const [isOpen, setIsOpen] = useState(false);
     const handleOpen = () => {
-    setIsOpen(!isOpen); // Invert the state on click
+    setIsOpen(!isOpen);
+	setIsOffer(false);
+
   };
 
 
@@ -53,6 +55,7 @@ export default function FooterClient({settings}) {
 
   const handleOpenOffer = () => {
     setIsOffer(!isOffer); // Invert the state on click
+	setIsOpen(false);
   };
 
 const phoneNumber = `+91${settings.phone}`;

@@ -24,7 +24,7 @@ export default function SearchResults() {
    
   useEffect(() => {
     if (!pick_date || !from || !bookingType || !mobile) {
-     // router.replace("/"); 
+      router.replace("/"); 
     }
     const userData = { mobile: mobile };
     localStorage.setItem("userData", JSON.stringify(userData));
