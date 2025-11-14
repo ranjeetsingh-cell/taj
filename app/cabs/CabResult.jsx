@@ -3,7 +3,7 @@ import { useState, useEffect,useRef } from "react";
 import { useSearchParams,useRouter } from 'next/navigation';
 import LeadForm from "/components/LeadForm";
 import Search from "/components/Search";
-
+const NEXT_PUBLIC_SITE_URL = process.env.NEXT_PUBLIC_SITE_URL; 
 
 export default function SearchResults() {
     const searchParams = useSearchParams();
@@ -47,7 +47,7 @@ export default function SearchResults() {
         };
 
 
-        await fetch('/api/search', {
+        await fetch(`${NEXT_PUBLIC_SITE_URL}api/search`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(searchData),
@@ -55,7 +55,7 @@ export default function SearchResults() {
 
         if(from!=null && to!=null)
         {
-        const resDis = await fetch(`/api/distance/?from=${from}&to=${to}`);
+        const resDis = await fetch(`${NEXT_PUBLIC_SITE_URL}api/distance/?from=${from}&to=${to}`);
         const dataDis = await resDis.json();
         setDistance(dataDis);       
         km = dataDis.distanceInKm;
@@ -63,7 +63,7 @@ export default function SearchResults() {
        
  
 
-        const res = await fetch(`/api/cabprice/?bookingType=${bookingType}&km=${km}&from=${from}&to=${to}&fD=${pick_date}&tD=${return_date}`);
+        const res = await fetch(`${NEXT_PUBLIC_SITE_URL}api/cabprice/?bookingType=${bookingType}&km=${km}&from=${from}&to=${to}&fD=${pick_date}&tD=${return_date}`);
         const data = await res.json();
         setCars(data.cabs);
         setOtherData(data.other_data);
@@ -99,7 +99,7 @@ export default function SearchResults() {
     };
 
     const encoded = encodeURIComponent(btoa(JSON.stringify(queryData)));
-    router.push(`/booking?data=${encoded}`);
+    router.push(`${NEXT_PUBLIC_SITE_URL}booking?data=${encoded}`);
 
    // router.push(`/booking?${query}`);
   };

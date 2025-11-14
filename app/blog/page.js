@@ -4,9 +4,10 @@ import "../css/blog.css";
 import Blogs from './blogs';
 import { apiRequest } from "/lib/laravel";
 
+
 async function getPage(id) {
   try {
-      const url = `getmeta/${id}`;
+     const url = `getmeta/${id}`;
      const data = await apiRequest(url);
 
     if (!data.status) return null;

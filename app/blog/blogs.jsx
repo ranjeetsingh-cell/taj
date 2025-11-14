@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useSearchParams } from 'next/navigation';
-
+const NEXT_PUBLIC_SITE_URL = process.env.NEXT_PUBLIC_SITE_URL; 
 
 export default function BlogList() {
   const searchParams = useSearchParams();
@@ -13,7 +13,7 @@ export default function BlogList() {
  const top_page = searchParams.get('page')||1;
 
   const fetchBlogs = async (page = 1) => {
-  const res = await fetch(`/api/blogs?page=${page}`);
+  const res = await fetch(`${NEXT_PUBLIC_SITE_URL}api/blogs?page=${page}`);
   const data = await res.json();
 
   setBlogs(data.blogs);
