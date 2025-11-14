@@ -1,6 +1,7 @@
 
 import { apiRequest } from "@/lib/laravel";
 import "../css/cms.css";
+import { notFound } from 'next/navigation';
 
 async function getPageData(slug) {
   try {
@@ -18,15 +19,12 @@ async function getPageData(slug) {
 
 
 export async function generateMetadata({ params }) {
-    const { slug } = await params; // ✅ await params
+  const { slug } = await params; // ✅ await params
   const pageData = await getPageData(slug);
 
   if (!pageData) 
   { 
-    return {
-      title: "Page Not Found | Tajways Cabs",
-      description: "Page Not Found | Tajways Cabs",
-    };
+      notFound();
   }
 const page = pageData.page;
   return {
@@ -49,15 +47,7 @@ export default async function DynamicPage({ params }) {
 
 if (!dataPage) {
 
-     return ( 
-    <div className="container text-center my-5">
-      <h1>404</h1>
-      <p>Sorry, the page you’re looking for does not exist.</p>
-      <a href="/" className="btn btn-primary mt-3">
-        Go Home
-      </a>
-    </div>
-  );
+    notFound();
   
 }
    const pageData = dataPage.page;
