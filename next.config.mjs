@@ -7,11 +7,11 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "/:path*{jpg,jpeg,png,svg,gif,webp,ico}",
+        source: "/images/:path*",
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=31536000, immutable"
+             value: "public, max-age=2592000, immutable"  
           }
         ]
       }
