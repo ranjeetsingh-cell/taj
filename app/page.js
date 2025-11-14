@@ -1,4 +1,4 @@
-import { apiRequest } from "@/lib/laravel";
+import { apiRequest } from "/lib/laravel";
 import Search from "../components/Search";
 
 

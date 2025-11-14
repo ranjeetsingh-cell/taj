@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { apiRequest } from "@/lib/laravel";
+import { apiRequest } from "/lib/laravel";
 
 export async function GET(req) {
   try {

@@ -2,8 +2,8 @@
 import "./bootstrap.min.css";
 import "./globals.css";
 import Script from "next/script";
-import HeaderClient from "@/components/HeaderClient";
-import { apiRequest } from "@/lib/laravel";
+import HeaderClient from "/components/HeaderClient";
+import { apiRequest } from "/lib/laravel";
 
 
 async function getAppSettings() {

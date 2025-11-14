@@ -1,5 +1,5 @@
 
-import { apiRequest } from "@/lib/laravel";
+import { apiRequest } from "/lib/laravel";
 import "../css/cms.css";
 import { notFound } from 'next/navigation';
 

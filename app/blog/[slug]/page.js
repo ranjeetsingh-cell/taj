@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { apiRequest } from "@/lib/laravel";
+import { apiRequest } from "/lib/laravel";
 import Link from "next/link";
 import ContactForm from "/components/ContactForm";
 
